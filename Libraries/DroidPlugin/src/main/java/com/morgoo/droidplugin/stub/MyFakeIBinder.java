@@ -26,6 +26,8 @@ import android.os.IBinder;
 import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
+import android.os.ResultReceiver;
+import android.os.ShellCallback;
 
 import java.io.FileDescriptor;
 
@@ -77,5 +79,10 @@ public class MyFakeIBinder implements IBinder {
     @Override
     public boolean unlinkToDeath(DeathRecipient deathRecipient, int i) {
         return false;
+    }
+
+    @Override
+    public void shellCommand(FileDescriptor in, FileDescriptor out, FileDescriptor err, String[] args, ShellCallback shellCallback, ResultReceiver resultReceiver) throws RemoteException {
+
     }
 }

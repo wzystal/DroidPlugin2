@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    InputStream inputStream = getAssets().open("systemservice.apk");
+                    InputStream inputStream = getAssets().open("test.apk");
                     File file = createFileFromInputStream(inputStream);
                     if(file!= null) {
                         doInstall(file);
